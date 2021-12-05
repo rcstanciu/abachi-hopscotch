@@ -1,0 +1,31 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap");
+
+html,
+body {
+  background-color: hsl(0, 0%, 21%);
+}
+
+* {
+  font-family: "Roboto Mono", monospace !important;
+}
+
+a {
+  color: unset;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
