@@ -2,7 +2,7 @@ import { ApolloClient, gql, InMemoryCache, useQuery } from "@apollo/client";
 
 const PROTOCOL_METRICS_QUERY = gql`
   query TreasuryQuery {
-    protocolMetrics(first: 1, orderBy: timestamp, orderDirection: desc) {
+    protocolMetrics(first: 100, orderBy: timestamp, orderDirection: desc) {
       id
       timestamp
       ohmCirculatingSupply

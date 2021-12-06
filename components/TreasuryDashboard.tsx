@@ -13,7 +13,8 @@ const TreasuryDashboard = () => {
       Number(metrics.ohmCirculatingSupply)
     : null;
 
-  const wsOhmPrice = index ? metrics.ohmPrice * index : null;
+  const wsOhmPrice =
+    index && metrics?.ohmPrice ? metrics.ohmPrice * index : null;
 
   return (
     <section className="section">
@@ -26,6 +27,7 @@ const TreasuryDashboard = () => {
                 Intl.NumberFormat("en-US", {
                   style: "currency",
                   currency: "USD",
+                  minimumFractionDigits: 0,
                   maximumFractionDigits: 0,
                 }).format(metrics.marketCap)}
             </p>
